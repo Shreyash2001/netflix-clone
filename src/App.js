@@ -3,13 +3,23 @@ import Banner from './Banner';
 import Nav from './Nav';
 import requests from './requests';
 import Row from './Row';
+import { BrowserRouter as Router, Switch,  Route } from 'react-router-dom'
+import MovieInfo from './MovieInfo';
+
+
 
 function App() {
   return (
+    <Router>
     <div className="app">
-    <Nav />
+    <Switch>
+    <Route path="/movies/:movieId">
+      <MovieInfo fetchApi={requests.fetchMoviesOnSearch} />
+    </Route>
+    <Route path="/">
+    <Nav fetchMovies={requests.fetchMoviesOnSearch}/>
     <Banner />
-      <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow/>
+      <Row title="Popular" fetchUrl={requests.fetchNetflixOriginals} isLargeRow/>
       <Row title="Trending" fetchUrl={requests.fetchTrending} />
       <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Row title="Action" fetchUrl={requests.fetchActionMovies} />
@@ -17,8 +27,10 @@ function App() {
       <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
-      
+      </Route>
+      </Switch>
     </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,167 @@
+.movieInfo {
+    color: white;
+    display: flex;
+    height: 145vh;
+    padding: 56px;
+}
+
+
+.movieInfo__picture {
+    flex: 0.4;
+}
+
+.movieInfo__picture > img  {
+    width: 81%;
+    padding: 30px;
+}
+
+.movieInfo__description {
+    align-items: center;
+    flex: 0.6;
+    padding: 30px;
+    border-left: 1px solid lightgray;
+}
+
+.movieInfo__description > h3 {
+    font-size: 52px;
+}
+
+.movieInfo__description > h4 {
+    margin-bottom: 10px;
+}
+
+.movieInfo__basicInfo {
+    display: flex;
+}
+
+.movieInfo__basicInfo > p {
+    padding: 10px;
+}
+
+.movieInfo__imdb {
+    padding: 30px;
+}
+
+.overview {
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.movieInfo__top {
+    background-color: #111;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    justify-content: space-between;
+    position: fixed;
+    padding-top: 20px;
+    padding: 20px 0;
+    display: flex;
+    height: 30px;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    
+}
+
+.movieInfo__avatar {
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    object-fit: contain;
+}
+
+.movieInfo__logo {
+    position: fixed;
+    left: 20px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.player:hover {
+    color: lightgray;
+}
+
+@media only screen and (max-width: 800px) {
+    .movieInfo {
+        color: white;
+        display: flex;
+        height: 181vh;
+        padding: 56px;
+    }
+
+    .movieInfo__picture {
+        flex: 0.6;
+    }
+    
+    .movieInfo__picture > img  {
+        width: 108%;
+        padding: 5px;
+        margin-top: 45px;
+        margin-left: -39px;
+    }
+    
+    .movieInfo__description {
+        align-items: center;
+        flex: 0.4;
+        padding: 9px;
+        border-left: 1px solid lightgray;
+    }
+    
+    .movieInfo__description > h3 {
+        font-size: 20px;
+    }
+    
+    .movieInfo__description > h4 {
+        margin-bottom: 10px;
+    }
+    
+    .movieInfo__basicInfo {
+        display: grid;
+    }
+    
+    .movieInfo__basicInfo > p {
+        padding: 10px;
+    }
+    
+    .movieInfo__imdb {
+        padding: 12px;
+    }
+    
+    .overview {
+        margin-bottom: 10px;
+    }
+    
+    .tagline {
+        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
+
+    .movieInfo__imdb > h1 {
+        font-size: 19px;
+        padding: 10px;
+    }
+
+    .player {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .player > h2 {
+        font-size: 20px;
+    }
+  }

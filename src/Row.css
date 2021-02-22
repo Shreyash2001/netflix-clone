@@ -11,8 +11,15 @@
 }
 
 .row__posters::-webkit-scrollbar {
-    display: none;
+    background-color: transparent;
+    width: 20%;
+    height: 4px;
 }
+
+.row__posters::-webkit-scrollbar-thumb {
+    background-color: rgb(58, 57, 57);
+}
+
 
 .row__poster {
     object-fit: contain;
@@ -33,3 +40,13 @@
 .row__posterLarge:hover {
     transform: scale(1.09);
 }
+
+.row__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    cursor: pointer;
+}
+
+ 
