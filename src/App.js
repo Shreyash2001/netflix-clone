@@ -5,6 +5,7 @@ import requests from './requests';
 import Row from './Row';
 import { BrowserRouter as Router, Switch,  Route } from 'react-router-dom'
 import MovieInfo from './MovieInfo';
+import Login from './Login';
 
 
 
@@ -16,7 +17,7 @@ function App() {
     <Route path="/movies/:movieId">
       <MovieInfo fetchApi={requests.fetchMoviesOnSearch} />
     </Route>
-    <Route path="/">
+    <Route path="/home">
     <Nav fetchMovies={requests.fetchMoviesOnSearch}/>
     <Banner />
       <Row title="Popular" fetchUrl={requests.fetchNetflixOriginals} isLargeRow/>
@@ -27,6 +28,9 @@ function App() {
       <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      </Route>
+      <Route path="/">
+        <Login />
       </Route>
       </Switch>
     </div>
